@@ -1,0 +1,5 @@
+# Ignore tudo
+!.*
+
+# Não ignore arquivos c
+!.*\.c
