@@ -1,5 +1,5 @@
 # Ignore tudo
-!.*
+*
 
-# Não ignore arquivos c
-!.*\.c
+# Menos arquivos c
+!*.c
