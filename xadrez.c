@@ -20,5 +20,17 @@ int main() {
     for (int i = 0; i < movimentos_rainha; i++) {
         printf("Esquerda\n");
     }
+
+    printf("\nCAVALO:\n");
+    // Imprime "Baixo" duas vezes, quando
+    int movimentos_cavalo = 0;
+    while (movimentos_cavalo < 1){
+        for (int i = 0; i < 2; i++) {
+            printf("Baixo\n");
+        }
+        printf("Esquerda\n");
+        movimentos_cavalo++;
+    }
+
     return 0;
 }
