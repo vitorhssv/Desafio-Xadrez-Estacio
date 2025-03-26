@@ -1,36 +1,49 @@
 #include <stdio.h>
 
-int main() {
-    int movimentos_torre = 5;
-    int movimentos_bispo = 6;
-    int movimentos_rainha = 8;
-    // imprime o movimento n vezes pra cada peça
-
-    printf("TORRE:\n");
-    for (int i = 0; i < movimentos_torre; i++) {
+// cada função de peça usa o argumento movimentos para mover a peça n vezes
+void movimentos_torre(int movimentos) {
+    for (int i = 0; i < movimentos; i++) {
         printf("Direita\n");
     }
+}
 
-    printf("\nBISPO:\n");
-    for (int i = 0; i < movimentos_bispo; i++) {
+void movimentos_bispo(int movimentos) {
+    for (int i = 0; i < movimentos; i++) {
         printf("Cima direita\n");
     }
+}
+
+void movimentos_rainha(int movimentos) {
+    for (int i = 0; i < movimentos; i++) {
+        printf("Esquerda\n");
+    }
+}
+
+void movimentos_cavalo() {
+    // Imprime "Cima" duas vezes usando um loop for, depois imprime "Direita"
+    int i = 0;
+    while (i < 1){
+        for (int j = 0; j < 2; j++) {
+            printf("Cima\n");
+        }
+        printf("Direita\n");
+        i++;
+    }
+}
+
+int main() {
+
+    printf("TORRE:\n");
+    movimentos_torre(5);
+
+    printf("\nBISPO:\n");
+    movimentos_bispo(6);
 
     printf("\nRAINHA:\n");
-    for (int i = 0; i < movimentos_rainha; i++) {
-        printf("Esquerda\n");
-    }
+    movimentos_rainha(8);
 
     printf("\nCAVALO:\n");
-    // Imprime "Baixo" duas vezes, quando
-    int movimentos_cavalo = 0;
-    while (movimentos_cavalo < 1){
-        for (int i = 0; i < 2; i++) {
-            printf("Baixo\n");
-        }
-        printf("Esquerda\n");
-        movimentos_cavalo++;
-    }
+    movimentos_cavalo();
 
     return 0;
 }
